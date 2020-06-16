@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import Team from "./components/Team.js";
 import TeamForm from "./components/TeamForm.js";
 
