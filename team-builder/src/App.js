@@ -18,13 +18,34 @@ const initialFormValues = {
 }
 
 function App() {
+  //USESTATE
   const [teamList, setTeamList] = useState(initialTeamsList)
 
   const [formValues, setFormValues] = useState(initialFormValues)
 
+  //EVENTS
+  const onInputChange = event => {
+    const { name, value} = event.target
+
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    })
+  }
+
+  const onSubmit = event => {
+    event.preventDefault()
+  }
+
   return (
     <div className="App">
-    <TeamForm/>
+    <TeamForm values={formValues} onInputChange={onInputChange} onSubmit={onSubmit}/>
+
+    {
+      teamList.map(team => {
+        return <Team key={team.id} details={team} />
+      })
+    }
     </div>
   );
 }
