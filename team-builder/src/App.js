@@ -49,7 +49,7 @@ function App() {
     const newTeamMember = {
       username: formValues.username.trim(),
       email: formValues.email.trim(),
-      role: formValues.role,
+      role: formValues.role + ":)",
     };
     //4. Update 'state' list with new Object
     setTeamList((teams) => [newTeamMember, ...teams]);
