@@ -26,7 +26,7 @@ export default function TeamForm(props) {
                 <input id='emailInput' type='email' name='email' value={values.email} onChange={onInputChange}/>
                 {/* Dropdown Select */}
                 <label>Role:&nbsp;
-                    <select name='role' onChange={onInputChange}>
+                    <select name='role' value={values.role} onChange={onInputChange}>
                         <option value=''>--Select a Role--</option>
                         <option value='IOS Developer'>IOS Developer</option>
                         <option value='Data Scientist'>Data Scientist</option>
