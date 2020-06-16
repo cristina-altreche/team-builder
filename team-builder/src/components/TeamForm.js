@@ -10,7 +10,7 @@ export default function TeamForm(props) {
 
     return (
 
-        <form>
+        <form className='form container' onSubmit={onSubmit}>
             <div className='form-group submit'>
                 <h2>Add a Team Member</h2>
                 <button>Submit</button>
